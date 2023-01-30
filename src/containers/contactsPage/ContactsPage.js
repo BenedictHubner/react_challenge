@@ -28,7 +28,7 @@ export const ContactsPage = props => {
       }
     };
     setDuplicate(false);
-  }, [name]);
+  }, [contacts, name]);
 
   return (
     <div>
