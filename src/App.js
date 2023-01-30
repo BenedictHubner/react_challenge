@@ -44,12 +44,12 @@ function App() {
           </Route>
           <Route path={ROUTES.CONTACTS}>
             <ContactsPage contacts={contacts}
-                          onAdd={addContact}/>
+                          addContact={addContact}/>
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
             <AppointmentsPage contacts={contacts}
                               appointments={appointments}
-                              onAdd={addAppointment}/>
+                              addAppointment={addAppointment}/>
           </Route>
         </Switch>
       </main>
