@@ -21,12 +21,14 @@ export const ContactsPage = props => {
   };
 
   useEffect( () => {
-    contacts.map( contact => {
+    for (const contact of contacts) {
       if (contact.name === name) {
         setDuplicate(true);
-      };
-    });
-  });
+        return;
+      }
+    };
+    setDuplicate(false);
+  }, [name]);
 
   return (
     <div>
