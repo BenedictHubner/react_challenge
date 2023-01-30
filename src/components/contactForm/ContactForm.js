@@ -22,9 +22,9 @@ export const ContactForm = ({
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={name} onChange={handleNameChange} />
-      <input type="tel" value={phone} onChange={handlePhoneChange} pattern="[0-9]{5}" />
-      <input type="email" value={email} onChange={handleEmailChange} />
+      <input type="text" value={name} onChange={handleNameChange} required />
+      <input type="tel" value={phone} onChange={handlePhoneChange} pattern="[0-9]{5}" required /> 
+      <input type="email" value={email} onChange={handleEmailChange} required/>
       <input type="submit" />
     </form>
   );
