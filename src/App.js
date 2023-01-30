@@ -14,18 +14,16 @@ function App() {
   };
 
   const addContact = (name, phone, email) => {
-    const prev = contacts;
-    setContacts([
-      { name: name, phone: phone, email: email },
-      ...prev
+    setContacts( prev => [
+      ...prev,
+      { name: name, phone: phone, email: email }
     ]);
   }
 
   const addAppointment = (title, contact, date, time) => {
-    const prev = appointments;
-    setAppointments([
-      { title: title, contact: contact, date: date, time: time },
-      ...prev
+    setAppointments(prev => [
+      ...prev,
+      { title: title, contact: contact, date: date, time: time }
     ]);
   }
 
@@ -49,7 +47,8 @@ function App() {
                           onAdd={addContact}/>
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
-            <AppointmentsPage appointments={appointments}
+            <AppointmentsPage contacts={contacts}
+                              appointments={appointments}
                               onAdd={addAppointment}/>
           </Route>
         </Switch>
