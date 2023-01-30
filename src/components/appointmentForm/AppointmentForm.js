@@ -29,13 +29,16 @@ export const AppointmentForm = ({
   const handleTimeChange = e => {
     setTime(e.target.value);
   }
+  const handleContactChange = e => {
+    setContact(e.target.value);
+  }
 
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" value={title} onChange={handleTitleChange} required />
       <input type="date" value={date} onChange={handleDateChange} required min={getTodayString()} /> 
       <input type="time" value={time} onChange={handleTimeChange} required/>
-      <ContactPicker contacts={contacts} />
+      <ContactPicker contacts={contacts} value={contact} onChange={handleContactChange} />
       <input type="submit" />
     </form>
   );
