@@ -16,7 +16,7 @@ export const AppointmentsPage = props => {
     addAppointment(title, contact, date, time);
 
     setTitle('');
-    setContact({});
+    setContact('');
     setDate('');
     setTime('');
   };

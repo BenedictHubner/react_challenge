@@ -2,7 +2,7 @@ import React from "react";
 
 export const ContactPicker = props => {
   const contacts = props.contacts;
-  const handleChange = props.handleChange;
+  const handleChange = props.onChange;
 
   return (
     <select defaultValue="" onChange={handleChange}>
